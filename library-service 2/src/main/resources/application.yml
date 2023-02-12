@@ -1,0 +1,18 @@
+server:
+  port: 9002
+spring:
+  jpa:
+    database: h2
+  h2:
+    console:
+      path: /h2/console
+      enabled: true
+  application:
+    name: LIBRARY-SERVICE
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:${EUREKA_URI: http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
